@@ -9,4 +9,11 @@ class Tetris:
         pass
 
     def draw(self):
-        pass
+        self.draw_grid()
+
+    def draw_grid(self):
+        for x in range(FIELD_W):
+            for y in range(FIELD_H):
+                pg.draw.rect(self.app.screen, 'black',
+                             (x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE), 1)
+                
